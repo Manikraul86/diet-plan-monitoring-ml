@@ -1,0 +1,32 @@
+version: "3.10"
+
+networks:
+  project_network:
+    driver: bridge
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: FastAPI_Backend/Dockerfile
+    image: backend:latest
+    container_name: backend
+    ports:
+      - "8080:8080"
+    networks:
+      - project_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Streamlit_Frontend/Dockerfile
+    image: frontend:latest
+    container_name: frontend
+    ports:
+      - "8501:8501"
+    networks:
+      - project_network
+    depends_on:
+      - backend
+    volumes:
+      - ./Streamlit_Frontend:/app  # ✅ Correct path mount
