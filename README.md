@@ -93,12 +93,12 @@ Then open http://localhost:8501 and enjoy :smiley:.
 PS: You should have docker and docker-compose already installed
 ### Use the hosted version on Streamlit Cloud
 
-https://diet-recommendation-system.streamlit.app/
+https://diet-plan-monitoring-ml-sfsycrtj7mht5ukqpjifvj.streamlit.app/
 
 ## Citation
 ```
 @software{narjis_2024_12507829,
-  author       = {Narjis, Zakaria},
+  author       = {Manik, Raul},
   title        = {Diet recommendation system},
   month        = jun,
   year         = 2024,
